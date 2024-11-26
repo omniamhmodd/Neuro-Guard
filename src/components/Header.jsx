@@ -5,9 +5,9 @@ function Header() {
     return (
     <header className=" shadow-md border-spacing-1">
         <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        <div className="text-lg font-bold text-[#000000]">
-            <img src={logo} alt="" />
-            Neuro Guard 
+        <div className="flex items-center text-lg font-bold text-[#000000]">
+            <img src={logo} alt=""className="h-12 w-12" />
+           <span className="ml-4 text-xl font-bold text-gray-800">Neuro Guard </span>
             </div>
         <nav>
             <ul className="flex space-x-4">

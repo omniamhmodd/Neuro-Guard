@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import signin from '../images/signin.svg'
+import { FaGoogle } from "react-icons/fa";
 
 function SignInForm() {
     const [email, setEmail] = useState('');
@@ -36,97 +37,93 @@ function SignInForm() {
             width={1255}
             height={1255}  
             className="mx-auto"
-          />
+            />
         </div>
-      </div>
+        </div>
 
       {/* Right Section - Form */}
-      <div className="flex items-center justify-center min-h-screen ">
-      <div
-        className="bg-white rounded-lg shadow-lg p-8 mt-17 mr-9 "
+        <div className="flex items-center justify-center min-h-screen  ">
+        <div
+        className="bg-white rounded-lg shadow-lg p-8 mt-17 mr-9 ml-9"
         style={{ width: '660px', height: '600px' }}
-      >
+        >
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-2">Sign In</h2>
         <p className="text-center text-gray-600 mb-6">Your learning awaits. Log In now!</p>
         <form>
           {/* Email Field */}
-          <div className="mb-4">
+            <div className="mb-4">
             <label
-              htmlFor="email"
-              className="block text-gray-700 font-medium mb-2 text-left pl-1"
+                htmlFor="email"
+                className="block text-gray-700 font-medium mb-2 text-left pl-1"
             >
-              Email<span className="text-[#FF4D4F]">*</span>
+                Email<span className="text-[#FF4D4F]">*</span>
             </label>
             <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={handleEmailChange}
-              placeholder="Example@gmail.com"
-              className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 ${
+                type="email"
+                id="email"
+                value={email}
+                onChange={handleEmailChange}
+                placeholder="Example@gmail.com"
+                className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 ${
                 emailError ? 'border-[#FF4D4F] focus:ring-[#FF4D4F]' : 'border-gray-300 focus:ring-[#0C7489]'
-              }`}
+                }`}
             />
             {emailError && (
-              <p className="text-[#FF4D4F] text-sm mt-1">Please input valid email. This email is invalid.</p>
+                <p className="text-[#FF4D4F] text-sm mt-1">Please input valid email. This email is invalid.</p>
             )}
-          </div>
+            </div>
 
           {/* Password Field */}
-          <div className="mb-4">
+        <div className="mb-4">
             <label
-              htmlFor="password"
-              className="block text-gray-700 font-medium mb-2 text-left pl-1"
+                htmlFor="password"
+                className="block text-gray-700 font-medium mb-2 text-left pl-1"
             >
-              Password<span className="text-[#FF4D4F]">*</span>
+                Password<span className="text-[#FF4D4F]">*</span>
             </label>
             <input
-              type="password"
-              id="password"
-              placeholder="Input password"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0C7489]"
+                type="password"
+                id="password"
+                placeholder="Input password"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0C7489]"
             />
             <div className="text-right mt-1">
-              <a href="#" className="text-[#0066D8] text-sm hover:underline">Forgot Password?</a>
+                <a href="#" className="text-[#0066D8] text-sm hover:underline">Forgot Password?</a>
             </div>
-          </div>
+            </div>
 
           {/* Login Button */}
-          <button
+            <button
             type="submit"
             className="w-full bg-[#0C7489] text-white py-2 px-4 rounded-lg hover:bg-[#065a67] transition duration-300"
-          >
+            >
             Login
-          </button>
+            </button>
 
           {/* Continue with Google */}
-          <div className="flex items-center justify-center mt-4">
+            <div className="flex items-center justify-center mt-4">
             <div className="w-1/3 border-b border-gray-300"></div>
             <p className="text-gray-600 px-2 text-sm">Or continue with</p>
             <div className="w-1/3 border-b border-gray-300"></div>
-          </div>
-          <button
+            </div>
+            <button
             type="button"
             className="w-full flex items-center justify-center mt-4 py-2 px-4 border border-gray-300 rounded-lg hover:bg-gray-100"
-          >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png"
-              alt="Google Logo"
-              className="w-5 h-5 mr-2"
-            />
+            >
+            <FaGoogle className="mr-2 text-[#000000]" />
             Continue with Google
-          </button>
+            </button>
         </form>
 
         {/* Sign Up Link */}
         <p className="text-gray-600 text-sm text-center mt-6">
-          Don't have an account?{' '}
-          <a href="/signup" className="text-[#0066D8] hover:underline">Sign Up</a>
+            Don't have an account?{' '}
+            <a href="/signup" className="text-[#0066D8] hover:underline">Sign Up</a>
         </p>
-      </div>
+        </div>
     </div>
     </div>
-  );
+    );
 }
 
 export default SignInForm;
